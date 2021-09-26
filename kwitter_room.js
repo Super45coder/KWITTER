@@ -3,6 +3,7 @@
 const firebaseConfig = {
       apiKey: "AIzaSyDM7gZQpHHs2UoXyv-F4Po9aHkzc2mFoLA",
       authDomain: "kwitter-database-dc2be.firebaseapp.com",
+      databaseURL: "https://kwitter-database-dc2be-default-rtdb.firebaseio.com",
       projectId: "kwitter-database-dc2be",
       storageBucket: "kwitter-database-dc2be.appspot.com",
       messagingSenderId: "1014999291327",
@@ -10,7 +11,7 @@ const firebaseConfig = {
     };
     
     // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
     username = localStorage.getItem("Username");
 
     document.getElementById("username").innerHTML = "Welcome " + username + "!!!";
@@ -41,3 +42,8 @@ function RedirectToRoomName(name){
       window.location = "kwitter_page.html";
 }
 
+function logout(){
+      localStorage.removeItem("room_name");
+      localStorage.removeItem("Username");
+      window.location = "index.html";
+}
