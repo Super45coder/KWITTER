@@ -1,4 +1,4 @@
-var audio1 = document.getElementById("welcome");
+audio1 = document.getElementById("welcome");
 function addUser(){
     username = document.getElementById("username").value;
 
