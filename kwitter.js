@@ -12,8 +12,8 @@ const firebaseConfig = {
     // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-views = 0;
-username = localStorage.getItem("Username");
+var views = 0;
+var username = localStorage.getItem("Username");
 var audio1 = document.getElementById("welcome");
 function addUser(){
     username = document.getElementById("username").value;
