@@ -32,5 +32,6 @@ likes = document.getElementById("views").value;
 updated_likes=Number(likes) + 1;
 firebase.database().ref(username).child(views).update({
     likes:updated_likes
-    )};
+});
+document.getElementById("views").innerHTML = updated_likes;
 }
