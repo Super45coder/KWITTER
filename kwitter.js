@@ -24,7 +24,7 @@ function addUser(){
     console.log("Played");
   
 }
-function views(){
+function countviews(){
 likes = document.getElementById("views").value;
 updated_likes=Number(likes) + 1;
 firebase.database().ref(username).child(views).update({
