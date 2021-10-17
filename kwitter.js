@@ -27,7 +27,7 @@ function addUser(){
 function counting_views(){
 views = document.getElementById("views").value;
 updated_views = Number(views) + 1;
-firebase.database().ref(username).child(views).update({
+firebase.database().ref(username).update({
    views:updated_views
 });
 document.getElementById("views").innerHTML = updated_views;
