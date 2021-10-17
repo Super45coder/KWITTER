@@ -25,10 +25,10 @@ function addUser(){
   
 }
 function counting_views(){
-likes = document.getElementById("views").value;
-updated_likes=Number(likes) + 1;
+views = document.getElementById("views").value;
+updated_views = Number(views) + 1;
 firebase.database().ref(username).child(views).update({
-    likes:updated_likes
+   views:updated_views
 });
-document.getElementById("views").innerHTML = updated_likes;
+document.getElementById("views").innerHTML = updated_views;
 }
